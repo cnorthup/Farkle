@@ -13,6 +13,9 @@
 @interface ViewController () <DieLabelDelegate>
 {
     NSMutableArray *dice;
+    IBOutlet UILabel *playerTwoScore;
+    IBOutlet UILabel *playerOneScore;
+    BOOL whichPlayer;
 }
 @end
 
@@ -56,8 +59,6 @@
 }
 
 -(void)didChooseDie:(DieLabel *)dieLabel{
-    //DieLabel *die = dieLabel;
-    //[dice addObject:die];
     dieLabel.backgroundColor = [UIColor orangeColor];
     [dice removeObject:dieLabel];
     
