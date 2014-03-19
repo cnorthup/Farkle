@@ -21,6 +21,7 @@
 		562D4BAA18DA1908006FF228 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562D4B8C18DA1908006FF228 /* UIKit.framework */; };
 		562D4BB218DA1908006FF228 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 562D4BB018DA1908006FF228 /* InfoPlist.strings */; };
 		562D4BB418DA1908006FF228 /* FarkleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 562D4BB318DA1908006FF228 /* FarkleTests.m */; };
+		562D4BBF18DA1949006FF228 /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 562D4BBE18DA1949006FF228 /* DieLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		562D4BAF18DA1908006FF228 /* FarkleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FarkleTests-Info.plist"; sourceTree = "<group>"; };
 		562D4BB118DA1908006FF228 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		562D4BB318DA1908006FF228 /* FarkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarkleTests.m; sourceTree = "<group>"; };
+		562D4BBD18DA1949006FF228 /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
+		562D4BBE18DA1949006FF228 /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
+		562D4BC018DA2723006FF228 /* DieLabelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DieLabelDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				562D4B9718DA1908006FF228 /* AppDelegate.h */,
+				562D4BBD18DA1949006FF228 /* DieLabel.h */,
+				562D4BBE18DA1949006FF228 /* DieLabel.m */,
+				562D4BC018DA2723006FF228 /* DieLabelDelegate.h */,
 				562D4B9818DA1908006FF228 /* AppDelegate.m */,
 				562D4B9A18DA1908006FF228 /* Main.storyboard */,
 				562D4B9D18DA1908006FF228 /* ViewController.h */,
@@ -252,6 +259,7 @@
 				562D4B9F18DA1908006FF228 /* ViewController.m in Sources */,
 				562D4B9918DA1908006FF228 /* AppDelegate.m in Sources */,
 				562D4B9518DA1908006FF228 /* main.m in Sources */,
+				562D4BBF18DA1949006FF228 /* DieLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

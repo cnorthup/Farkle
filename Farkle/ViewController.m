@@ -7,23 +7,62 @@
 //
 
 #import "ViewController.h"
+#import "DieLabel.h"
+#import "DieLabelDelegate.h"
 
-@interface ViewController ()
-
+@interface ViewController () <DieLabelDelegate>
+{
+    NSMutableArray *dice;
+}
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
+    
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.die1.delegate = self;
+    self.die2.delegate = self;
+    self.die3.delegate = self;
+    self.die4.delegate = self;
+    self.die5.delegate = self;
+    self.die5.delegate = self;
+    dice = [NSMutableArray arrayWithObjects:self.die1, self.die2, self.die3, self.die4, self.die5, self.die6, nil];
+    NSLog(@"%lu", (unsigned long)dice.count);
+    NSLog(@"work");
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onRollButtonPressed:(id)sender {
+    if ([dice containsObject:self.die1] == YES) {
+        [self.die1 roll];
+    }
+    if ([dice containsObject:self.die2] == YES) {
+        [self.die2 roll];
+    }
+    if ([dice containsObject:self.die3] == YES) {
+        [self.die3 roll];
+    }
+    if ([dice containsObject:self.die4] == YES) {
+        [self.die4 roll];
+    }
+    if ([dice containsObject:self.die5] == YES) {
+        [self.die5 roll];
+    }
+    if ([dice containsObject:self.die6] == YES) {
+        [self.die6 roll];
+    }
+    
+}
+
+-(void)didChooseDie:(DieLabel *)dieLabel{
+    //DieLabel *die = dieLabel;
+    //[dice addObject:die];
+    dieLabel.backgroundColor = [UIColor orangeColor];
+    [dice removeObject:dieLabel];
+    
+    NSLog(@"%lu", (unsigned long)dice.count);
+    NSLog(@"work");
 }
 
 @end
