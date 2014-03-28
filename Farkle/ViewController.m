@@ -16,6 +16,7 @@
     IBOutlet UILabel *playerTwoScore;
     IBOutlet UILabel *playerOneScore;
     BOOL whichPlayer;
+    IBOutlet UILabel *turnScore;
 }
 @end
 
@@ -24,12 +25,14 @@
 - (void)viewDidLoad{
     
     [super viewDidLoad];
+    turnScore.text = @"0";
     self.die1.delegate = self;
     self.die2.delegate = self;
     self.die3.delegate = self;
     self.die4.delegate = self;
     self.die5.delegate = self;
-    self.die5.delegate = self;
+    self.die6.delegate = self;
+    
     dice = [NSMutableArray arrayWithObjects:self.die1, self.die2, self.die3, self.die4, self.die5, self.die6, nil];
     NSLog(@"%lu", (unsigned long)dice.count);
     NSLog(@"work");
@@ -60,10 +63,24 @@
 
 -(void)didChooseDie:(DieLabel *)dieLabel{
     dieLabel.backgroundColor = [UIColor orangeColor];
+    NSMutableArray *selectedDice = [NSMutableArray new];
     [dice removeObject:dieLabel];
-    
-    NSLog(@"%lu", (unsigned long)dice.count);
-    NSLog(@"work");
+    for (DieLabel *similarDie in dice) {
+        if (selectedDice.count != 2) {
+            if ([similarDie.text isEqualToString:dieLabel.text]) {
+                [selectedDice addObject:similarDie];
+            }
+        }
+        else {
+            break;
+        }
+    }
+    if (selectedDice.count == 2) {
+        [dice removeObjectsInArray:selectedDice];
+        for (DieLabel *comboDice in selectedDice) {
+            comboDice.backgroundColor = [UIColor orangeColor];
+        }
+    }
 }
 
 @end

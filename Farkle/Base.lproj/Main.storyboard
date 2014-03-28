@@ -81,7 +81,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="PWL-ho-F5t" appends="YES" id="2Ip-tK-3Ma"/>
+                                    <outletCollection property="gestureRecognizers" destination="PWL-ho-F5t" appends="YES" id="Hm3-uy-aRb"/>
                                 </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g5k-J7-aFm">
@@ -121,6 +121,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TurnScore:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yo0-s1-fV0">
+                                <rect key="frame" x="70" y="352" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8st-KY-J2t">
+                                <rect key="frame" x="162" y="352" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -131,9 +144,10 @@
                         <outlet property="die3" destination="abo-vH-8jF" id="KJe-9x-o6m"/>
                         <outlet property="die4" destination="JJS-Nt-KfB" id="07M-Nr-Twk"/>
                         <outlet property="die5" destination="TOL-xt-nrb" id="HDZ-Km-dzb"/>
-                        <outlet property="die6" destination="Du8-6p-Qjg" id="r8h-vg-jX7"/>
+                        <outlet property="die6" destination="Du8-6p-Qjg" id="9eE-ZX-ZIi"/>
                         <outlet property="playerOneScore" destination="ych-Rd-Mph" id="3cJ-Rp-bfL"/>
                         <outlet property="playerTwoScore" destination="Ndp-Ax-vOf" id="js7-tl-968"/>
+                        <outlet property="turnScore" destination="8st-KY-J2t" id="8c0-4q-y9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -164,9 +178,22 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="PWL-ho-F5t" userLabel="Tap Gesture Recognizer(6)">
                     <connections>
-                        <action selector="labelWasTapped:" destination="Du8-6p-Qjg" id="x7q-Os-DfS"/>
+                        <action selector="labelWasTapped:" destination="Du8-6p-Qjg" id="tRk-Vo-8X9"/>
                     </connections>
                 </tapGestureRecognizer>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Eqs-31-1iS">
+            <objects>
+                <viewController id="SA1-aG-sfa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6dp-25-L22">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuM-6m-cbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
